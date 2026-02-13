@@ -1,0 +1,128 @@
+---
+import Badge from "../ui/Badge.astro";
+---
+
+<section id="novedades" class="py-24 bg-zinc-900/30">
+  <div class="container mx-auto px-6">
+    <div
+      class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6"
+    >
+      <div>
+        <Badge text="Últimas Noticias" class="mb-4" />
+        <h2 class="text-3xl md:text-5xl font-bold">
+          Novedades <span class="text-green-500">Unicode</span>
+        </h2>
+      </div>
+      <a
+        href="#"
+        class="text-green-500 hover:text-green-400 font-medium flex items-center gap-2 transition-colors"
+      >
+        Ver todas las noticias
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- News Item 1 -->
+      <article
+        class="group relative bg-black border border-white/10 rounded-2xl overflow-hidden hover:border-green-500/30 transition-colors"
+      >
+        <div class="h-48 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800"
+            alt="Taller de Python"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        </div>
+        <div class="p-6">
+          <span class="text-xs text-green-500 font-mono mb-2 block"
+            >12 FEB 2026</span
+          >
+          <h3
+            class="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors"
+          >
+            Nuevo ciclo de talleres de Python
+          </h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Iniciamos el año con un bootcamp intensivo de Python para
+            principiantes. ¡Inscríbete ahora!
+          </p>
+          <a href="#" class="text-sm text-white font-medium hover:underline"
+            >Leer más</a
+          >
+        </div>
+      </article>
+
+      <!-- News Item 2 -->
+      <article
+        class="group relative bg-black border border-white/10 rounded-2xl overflow-hidden hover:border-green-500/30 transition-colors"
+      >
+        <div class="h-48 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800"
+            alt="Hackathon 2026"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        </div>
+        <div class="p-6">
+          <span class="text-xs text-green-500 font-mono mb-2 block"
+            >10 ENE 2026</span
+          >
+          <h3
+            class="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors"
+          >
+            Resultados Hackathon Unicode
+          </h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Felicitaciones a los equipos ganadores de nuestra primera hackathon
+            del año.
+          </p>
+          <a href="#" class="text-sm text-white font-medium hover:underline"
+            >Leer más</a
+          >
+        </div>
+      </article>
+
+      <!-- News Item 3 -->
+      <article
+        class="group relative bg-black border border-white/10 rounded-2xl overflow-hidden hover:border-green-500/30 transition-colors"
+      >
+        <div class="h-48 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800"
+            alt="Nuevos Miembros"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        </div>
+        <div class="p-6">
+          <span class="text-xs text-green-500 font-mono mb-2 block"
+            >05 ENE 2026</span
+          >
+          <h3
+            class="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors"
+          >
+            Bienvenida a nuevos miembros
+          </h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Más de 20 estudiantes se unieron a nuestra comunidad esta semana.
+          </p>
+          <a href="#" class="text-sm text-white font-medium hover:underline"
+            >Leer más</a
+          >
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
