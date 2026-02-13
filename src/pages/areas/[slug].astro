@@ -1,0 +1,90 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/shared/Navbar.astro";
+import Footer from "../../components/shared/Footer.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: "desarrollo-web" } },
+    { params: { slug: "ciberseguridad" } },
+    { params: { slug: "ia" } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const areas = {
+  "desarrollo-web": {
+    title: "Desarrollo Web",
+    description:
+      "Aprende a construir el futuro de la web con tecnologías modernas.",
+    content:
+      "En esta área nos enfocamos en el frontend y backend, utilizando frameworks como React, Astro, Node.js y más. Organizamos talleres desde HTML básico hasta arquitecturas complejas.",
+    image:
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200",
+  },
+  ciberseguridad: {
+    title: "Ciberseguridad",
+    description: "Protege la información y sistemas contra amenazas digitales.",
+    content:
+      "Estudiamos criptografía, hacking ético, seguridad en redes y forense digital. Participamos en CTFs y simulaciones de ataque-defensa.",
+    image:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200",
+  },
+  ia: {
+    title: "Inteligencia Artificial",
+    description: "Descubre el poder de los datos y el aprendizaje automático.",
+    content:
+      "Desde algoritmos básicos de ML hasta Deep Learning y LLMs like GPT. Analizamos datos y creamos modelos predictivos.",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200",
+  },
+};
+
+const area = areas[slug as keyof typeof areas];
+---
+
+<Layout title={`${area?.title || "Area"} | Unicode`}>
+  <Navbar />
+
+  <main class="pt-24 pb-12">
+    <div class="container mx-auto px-6">
+      {
+        !area ? (
+          <div class="text-center py-20">
+            <h1 class="text-4xl font-bold mb-4">Área no encontrada</h1>
+            <a href="/" class="text-green-500 hover:underline">
+              Volver al inicio
+            </a>
+          </div>
+        ) : (
+          <article>
+            <div class="relative h-64 md:h-96 rounded-3xl overflow-hidden mb-12">
+              <img
+                src={area.image}
+                alt={area.title}
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex items-end p-8 md:p-12">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-2">
+                  {area.title}
+                </h1>
+              </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+              <p class="text-xl text-green-400 font-medium mb-6">
+                {area.description}
+              </p>
+              <div class="prose prose-invert prose-lg">
+                <p>{area.content}</p>
+              </div>
+            </div>
+          </article>
+        )
+      }
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

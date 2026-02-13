@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/shared/Navbar.astro";
+import Footer from "../components/shared/Footer.astro";
+import Hero from "../components/sections/Hero.astro";
+import About from "../components/sections/About.astro";
+import Card from "../components/cards/Card.astro";
+---
+
+<Layout title="Unicode | Comunidad de Tecnología">
+	<Navbar />
+
+	<main>
+		<Hero />
+		<About />
+
+		<!-- Areas Section (Placeholder for now) -->
+		<section id="areas" class="py-24 bg-zinc-900/50">
+			<div class="container mx-auto px-6">
+				<h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+					Nuestras <span class="text-green-500">Áreas</span>
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<Card
+						title="Desarrollo Web"
+						description="Creación de aplicaciones modernas y sitios web utilizando las últimas tecnologías."
+						href="/areas/desarrollo-web"
+					/>
+					<Card
+						title="Ciberseguridad"
+						description="Protección de sistemas y datos. Hacking ético y seguridad informática."
+						href="/areas/ciberseguridad"
+					/>
+					<Card
+						title="Inteligencia Artificial"
+						description="Explorando el futuro con Machine Learning y Redes Neuronales."
+						href="/areas/ia"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Proyectos Section (Placeholder) -->
+		<section id="proyectos" class="py-24">
+			<div class="container mx-auto px-6">
+				<h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+					Proyectos <span class="text-green-500">Destacados</span>
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<Card
+						title="Sistema de Gestión"
+						description="Plataforma integral para gestión de eventos universitarios."
+						href="/proyectos/sistema-gestion"
+					/>
+					<Card
+						title="Bot de Discord"
+						description="Automatización y herramientas para la comunidad de Discord."
+						href="/proyectos/discord-bot"
+					/>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
