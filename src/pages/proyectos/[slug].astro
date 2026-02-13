@@ -7,6 +7,9 @@ export function getStaticPaths() {
   return [
     { params: { slug: "sistema-gestion" } },
     { params: { slug: "discord-bot" } },
+    { params: { slug: "app-movil" } },
+    { params: { slug: "plataforma-cursos" } },
+    { params: { slug: "clasificador-ia" } },
   ];
 }
 
@@ -27,6 +30,30 @@ const projects = {
     tech: ["Node.js", "Discord.js", "MongoDB"],
     description:
       "Bot personalizado para automatizar la bienvenida de miembros, roles, notificaciones y música en nuestro servidor.",
+    github: "#",
+  },
+  "app-movil": {
+    title: "App Móvil Unicode",
+    status: "Idea",
+    tech: ["Flutter", "Firebase"],
+    description:
+      "Aplicación móvil para que los estudiantes puedan acceder a noticias, eventos y recursos de la comunidad de forma rápida.",
+    github: "#",
+  },
+  "plataforma-cursos": {
+    title: "Plataforma de Cursos",
+    status: "En Desarrollo",
+    tech: ["React", "Django", "PostgreSQL"],
+    description:
+      "Un espacio de aprendizaje con cursos gratuitos sobre desarrollo de software y tecnología creados por miembros de Unicode.",
+    github: "#",
+  },
+  "clasificador-ia": {
+    title: "Clasificador de Imágenes IA",
+    status: "Completado",
+    tech: ["Python", "TensorFlow", "FastAPI"],
+    description:
+      "Un modelo de inteligencia artificial capaz de clasificar diferentes tipos de componentes de hardware con alta precisión.",
     github: "#",
   },
 };
